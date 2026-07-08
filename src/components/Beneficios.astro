@@ -1,0 +1,67 @@
+---
+import { Zap, TrendingUp, Eye } from "@lucide/astro"
+---
+
+<section 
+  id="beneficios" 
+  class="relative bg-dark-925 py-16 px-4 md:px-8 lg:px-16 scroll-mt-16 md:scroll-mt-20 overflow-hidden"
+>
+  <!-- Imagen: esquina inferior izquierda -->
+  <img 
+    src="/img/imagen.png" 
+    alt="" 
+    class="absolute left-[-50px] bottom-[-8%] h-[95%] max-w-[80%] w-auto object-cover object-left-bottom pointer-events-none select-none z-0 opacity-40 animate-slide-right hidden md:block"
+    style="animation-delay: 200ms"
+  />
+  
+
+  <!-- Contenido -->
+  <div class="relative z-10 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+    <div class="md:col-start-2">
+      <h4 
+        class="text-primary-300 font-bold text-lg mb-2 animate-slide-down"
+        style="animation-delay: 0ms"
+      >
+        Beneficios
+      </h4>
+      <h2 
+        class="text-3xl md:text-4xl font-display font-bold text-white mb-6 animate-slide-down"
+        style="animation-delay: 150ms"
+      >
+        ¿Por qué trabajar con nosotros?
+      </h2>
+      <p 
+        class="text-neutral-300 mb-8 animate-slide-down"
+        style="animation-delay: 300ms"
+      >
+        Impulsamos tu negocio con soluciones digitales que marcan la diferencia.
+      </p>
+
+      <div class="space-y-6">
+        <div class="flex gap-4 animate-slide-up" style="animation-delay: 400ms">
+          <Zap class="w-6 h-6 text-primary-500 mt-1 shrink-0" />
+          <div>
+            <h5 class="text-white font-semibold text-lg">Optimización</h5>
+            <p class="text-neutral-400">Maximizamos el rendimiento de tus procesos internos mediante automatización inteligente.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 animate-slide-up" style="animation-delay: 550ms">
+          <TrendingUp class="w-6 h-6 text-primary-500 mt-1 shrink-0" />
+          <div>
+            <h5 class="text-white font-semibold text-lg">Escalabilidad</h5>
+            <p class="text-neutral-400">Arquitecturas preparadas para crecer al ritmo de tu demanda sin fricciones técnicas.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 animate-slide-up" style="animation-delay: 700ms">
+          <Eye class="w-6 h-6 text-primary-500 mt-1 shrink-0" />
+          <div>
+            <h5 class="text-white font-semibold text-lg">Visibilidad</h5>
+            <p class="text-neutral-400">Estrategias digitales que posicionan tu marca en el centro de atención de tu audiencia.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

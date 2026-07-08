@@ -1,0 +1,65 @@
+<section class="section-hero bg-gradient-gray-end">
+  <div class="max-w-5xl mx-auto w-full px-4 pt-16 md:pt-20">
+    <h1
+      class="text-2xl sm:text-4xl md:text-6xl lg:text-8xl font-display font-semibold leading-[1.1] text-center"
+    >
+      <span
+        class="block relative w-fit mx-auto animate-slide-up"
+        style="animation-delay: 0ms"
+      >
+        <span id="word-hablemos" class="inline-block">Hablemos</span> de tu 
+        <span
+          id="line-1-bar"
+          class="absolute -bottom-2 md:-bottom-3 h-2.5 md:h-5 bg-primary-400 rounded-sm"
+        ></span>
+      </span>
+      próximo &nbsp;
+
+      <span class="pt-2 animate-slide-up" style="animation-delay: 150ms">
+        <span class="text-primary-500">Proyecto</span>.
+      </span>
+      <span
+        class="block relative w-fit mx-auto animate-slide-up"
+        style="animation-delay: 450ms"
+      >
+          <span
+          id="line-2-bar"
+          class="absolute -bottom-2 md:-bottom-3 h-2.5 md:h-5 bg-primary-400 rounded-sm"
+        ></span>
+      </span>
+    </h1>
+    <p class="text-neutral-200 ">Cuéntanos tu proyecto y te prepararemos una propuesta sin compromiso en menos de 48 horas. Tu transformación digital empieza aquí.</p>
+    <div
+      class="mt-4 mb-10 flex flex-col md:flex-row gap-4 justify-center items-center animate-fade-in"
+      style="animation-delay: 900ms"
+    >
+      <a href="#contacto" class="btn-primary">Solicita tu asesoria</a>
+      
+    </div>
+  </div>
+</section>
+
+<script>
+  function updateBars() {
+    const w1 = document.getElementById("word-hablemos");
+    const b1 = document.getElementById("line-1-bar");
+    if (w1 && b1) {
+      const r = w1.getBoundingClientRect();
+      b1.style.left = -r.left + "px";
+      b1.style.width = r.right + "px";
+    }
+    const w2 = document.getElementById("word-medida");
+    const b2 = document.getElementById("line-2-bar");
+    if (w2 && b2) {
+      const r = w2.getBoundingClientRect();
+      const p = w2.parentElement.getBoundingClientRect();
+      b2.style.left = r.left - p.left + "px";
+      b2.style.width = window.innerWidth - r.left + "px";
+    }
+  }
+  document.addEventListener("DOMContentLoaded", () => {
+    updateBars();
+    document.fonts.ready.then(updateBars);
+    window.addEventListener("resize", updateBars);
+  });
+</script>
