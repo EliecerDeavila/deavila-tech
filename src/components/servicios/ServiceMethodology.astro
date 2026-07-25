@@ -10,8 +10,8 @@ const { steps } = Astro.props;
 
 <section class="py-16 md:py-24 px-4" style="background: linear-gradient(180deg, #101417 21%, #222B36 70%, #334155 100%)">
   <div class="max-w-5xl mx-auto">
-    <SectionTitle title="Metodología de trabajo" />
-    <p class="text-neutral-400 text-center mb-12 max-w-2xl mx-auto">Nuestro proceso paso a paso para entregar resultados excepcionales.</p>
+    <SectionTitle title="Metodología de trabajo" animate={true} />
+    <p class="text-neutral-400 text-center mb-12 max-w-2xl mx-auto" data-scroll="fade" data-scroll-delay="100">Nuestro proceso paso a paso para entregar resultados excepcionales.</p>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       {steps.map((step, i) => (
         <div class="card-soft p-6 relative overflow-hidden group" data-scroll data-scroll-delay={i * 100}>

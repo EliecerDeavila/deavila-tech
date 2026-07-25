@@ -11,8 +11,8 @@ const { items } = Astro.props;
 
 <section class="py-16 md:py-24 px-4 bg-dark-925">
   <div class="max-w-5xl mx-auto">
-    <SectionTitle title="¿Qué incluye?" />
-    <p class="text-neutral-400 text-center mb-12 max-w-2xl mx-auto">Todo lo que necesitas para impulsar tu negocio con este servicio.</p>
+    <SectionTitle title="¿Qué incluye?" animate={true} />
+    <p class="text-neutral-400 text-center mb-12 max-w-2xl mx-auto" data-scroll="fade" data-scroll-delay="100">Todo lo que necesitas para impulsar tu negocio con este servicio.</p>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {items.map((item, i) => (
         <div class="card-dark border-1 border-primary-300 p-6 rounded-lg shadow-md hover:-translate-y-2 hover:border-primary-500 hover:shadow-xl transition-all duration-300" data-scroll data-scroll-delay={i * 100}>
