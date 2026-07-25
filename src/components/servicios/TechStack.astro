@@ -1,0 +1,23 @@
+---
+import SectionTitle from "./SectionTitle.astro";
+
+export interface Props {
+  items: string[];
+}
+
+const { items } = Astro.props;
+---
+
+<section class="py-16 md:py-24 px-4 bg-dark-800">
+  <div class="max-w-4xl mx-auto text-center">
+    <SectionTitle title="Tecnologías que utilizamos" variant="white" />
+    <p class="text-neutral-400 mb-10 max-w-2xl mx-auto">Trabajamos con herramientas modernas y probadas para garantizar calidad y rendimiento.</p>
+    <div class="flex flex-wrap justify-center gap-4">
+      {items.map((tech) => (
+        <span class="inline-block border border-primary-300/30 text-primary-300 px-5 py-2 rounded-full text-sm font-medium bg-dark-925/50">
+          {tech}
+        </span>
+      ))}
+    </div>
+  </div>
+</section>

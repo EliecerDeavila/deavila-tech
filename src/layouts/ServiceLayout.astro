@@ -1,0 +1,28 @@
+---
+import { ArrowLeft } from "@lucide/astro";
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+
+const { title, description, image = "/image/Imagen-fondo.svg" } = Astro.props;
+---
+<html lang="es">
+  <head>
+    <BaseHead title={title} description={description} image={image} />
+  </head>
+  <body class="bg-dark-950 text-neutral-200">
+    <Header />
+    <main>
+      <div class="relative">
+        <a href="/#servicios" class="fixed top-24 left-4 z-40 flex items-center gap-2 text-neutral-400 hover:text-primary-400 transition text-sm bg-dark-950/80 backdrop-blur-sm px-3 py-2 rounded-lg border border-border-dark">
+          <ArrowLeft class="w-4 h-4" />
+          Volver
+        </a>
+        <slot />
+      </div>
+    </main>
+    <footer class="text-center py-8 text-neutral-500 text-sm border-t border-border-dark">
+      <p>&copy; 2026 D Avila Tech. Todos los derechos reservados.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  </body>
+</html>

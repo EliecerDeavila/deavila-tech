@@ -1,0 +1,43 @@
+---
+import { Wrench, ShieldCheck, AlertTriangle, RefreshCw, Activity, Lock, Headphones } from "@lucide/astro";
+import ServiceLayout from "../../layouts/ServiceLayout.astro";
+import ServiceHero from "../../components/servicios/ServiceHero.astro";
+import ServiceIncludes from "../../components/servicios/ServiceIncludes.astro";
+import TechStack from "../../components/servicios/TechStack.astro";
+import ServiceMethodology from "../../components/servicios/ServiceMethodology.astro";
+import ServiceCTA from "../../components/servicios/ServiceCTA.astro";
+---
+
+<ServiceLayout title="Soporte y Mantenimiento - D Avila Tech" description="Proporcionamos soporte técnico continuo y mantenimiento proactivo para garantizar que tus sistemas funcionen sin problemas.">
+  <ServiceHero
+    title="Soporte y Mantenimiento"
+    subtitle="Mantenemos tus sistemas operando al máximo rendimiento con soporte técnico proactivo y correctivo."
+    icon="/icons/3d/soporte-mantenimiento.png"
+  />
+
+  <ServiceIncludes
+    items={[
+      { icon: ShieldCheck, title: "Mantenimiento preventivo", description: "Actualizaciones de seguridad, parches de software y optimización periódica de rendimiento." },
+      { icon: AlertTriangle, title: "Soporte correctivo 24/7", description: "Atención a incidentes críticos con tiempos de respuesta definidos según SLA." },
+      { icon: RefreshCw, title: "Actualizaciones tecnológicas", description: "Migración de versiones, actualización de dependencias y modernización de stack tecnológico." },
+      { icon: Activity, title: "Monitoreo continuo", description: "Supervisión de uptime, rendimiento y alertas tempranas para prevenir fallos." },
+      { icon: Lock, title: "Seguridad continua", description: "Auditorías de seguridad recurrentes, gestión de vulnerabilidades y backups automáticos." },
+      { icon: Headphones, title: "Mesa de ayuda", description: "Sistema de tickets, atención por chat y canal prioritario para reportes de incidencias." },
+    ]}
+  />
+
+  <TechStack
+    items={["Datadog", "New Relic", "Sentry", "PagerDuty", "Cloudflare", "GitLab CI", "Docker", "Prometheus"]}
+  />
+
+  <ServiceMethodology
+    steps={[
+      { title: "Evaluación", description: "Diagnóstico inicial de tus sistemas, identificación de riesgos y definición de SLA." },
+      { title: "Configuración", description: "Implementación de herramientas de monitoreo, alertas y procesos de escalamiento." },
+      { title: "Operación", description: "Soporte continuo con monitoreo 24/7, atención de incidencias y reportes periódicos." },
+      { title: "Mejora continua", description: "Revisión periódica de métricas, optimizaciones proactivas y actualizaciones planificadas." },
+    ]}
+  />
+
+  <ServiceCTA title="¿Necesitas soporte técnico confiable?" preselectedService="Soporte y Mantenimiento" />
+</ServiceLayout>

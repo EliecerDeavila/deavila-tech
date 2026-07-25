@@ -1,0 +1,43 @@
+---
+import { ShoppingCart, Store, CreditCard, Package, TrendingUp, Search, Palette } from "@lucide/astro";
+import ServiceLayout from "../../layouts/ServiceLayout.astro";
+import ServiceHero from "../../components/servicios/ServiceHero.astro";
+import ServiceIncludes from "../../components/servicios/ServiceIncludes.astro";
+import TechStack from "../../components/servicios/TechStack.astro";
+import ServiceMethodology from "../../components/servicios/ServiceMethodology.astro";
+import ServiceCTA from "../../components/servicios/ServiceCTA.astro";
+---
+
+<ServiceLayout title="E-commerce - D Avila Tech" description="Desarrollamos plataformas de comercio electrónico seguras y escalables, facilitando la venta de productos y servicios en línea.">
+  <ServiceHero
+    title="E-commerce"
+    subtitle="Plataformas de comercio electrónico diseñadas para vender más, con experiencias de compra fluidas y seguras."
+    icon="/icons/3d/ecommerce.png"
+  />
+
+  <ServiceIncludes
+    items={[
+      { icon: Store, title: "Tienda online completa", description: "Catálogo de productos, carrito de compras, checkout optimizado y gestión de inventario." },
+      { icon: CreditCard, title: "Pasarelas de pago", description: "Integración con Mercado Pago, Stripe, PayPal, Nequi y transferencias bancarias." },
+      { icon: Package, title: "Gestión de envíos", description: "Cálculo de envíos en tiempo real, tracking de pedidos e integración con transportadoras." },
+      { icon: TrendingUp, title: "Panel de ventas", description: "Dashboard con métricas de ventas, productos más vendidos, conversión y abandono de carrito." },
+      { icon: Search, title: "SEO para e-commerce", description: "Optimización de fichas de producto, categorías, datos estructurados y sitemaps." },
+      { icon: Palette, title: "Personalización visual", description: "Tema visual adaptable a tu marca, con banners promocionales y campañas estacionales." },
+    ]}
+  />
+
+  <TechStack
+    items={["Shopify", "WooCommerce", "Next.js", "Medusa", "Tailwind CSS", "Stripe", "Mercado Pago", "Vercel"]}
+  />
+
+  <ServiceMethodology
+    steps={[
+      { title: "Definición", description: "Análisis del modelo de negocio, catálogo, logística y requisitos de pago." },
+      { title: "Configuración", description: "Configuración de catálogo, pasarelas de pago, impuestos, envíos y dominios personalizados." },
+      { title: "Personalización", description: "Diseño visual alineado con tu marca, funcionalidades a medida y optimización móvil." },
+      { title: "Lanzamiento", description: "Pruebas de flujo completo de compra, migración de datos, deploy y monitoreo post-lanzamiento." },
+    ]}
+  />
+
+  <ServiceCTA title="¿Listo para vender en línea?" preselectedService="E-commerce" />
+</ServiceLayout>

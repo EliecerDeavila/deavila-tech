@@ -1,0 +1,112 @@
+---
+import Layout from "../layout/Layout.astro";
+import Header from "../components/Header.astro";
+---
+
+<Layout title="404 - Página no encontrada" description="La página que buscas no existe">
+  <Header />
+  <main class="section-hero bg-gradient-blue relative overflow-hidden min-h-screen flex items-center justify-center">
+    <!-- Partículas flotantes -->
+    <div class="particle particle-1"></div>
+    <div class="particle particle-2"></div>
+    <div class="particle particle-3"></div>
+    <div class="particle particle-4"></div>
+    
+    <!-- Contenido principal -->
+    <div class="text-center relative z-10 px-4">
+      <h1 class="glitch" data-text="404">404</h1>
+      <p class="text-xl md:text-2xl text-neutral-300 mt-4 mb-8 animate-fade-in" style="animation-delay: 200ms">
+        Página no encontrada
+      </p>
+      <a href="/" class="btn-shine-white animate-fade-in" style="animation-delay: 400ms">
+        Volver al inicio
+      </a>
+    </div>
+  </main>
+</Layout>
+
+<style is:global>
+  /* Glitch Effect - increased specificity */
+  .glitch.glitch {
+    font-family: var(--font-display);
+    font-size: clamp(8rem, 20vw, 16rem);
+    font-weight: 700;
+    color: var(--color-neutral-50);
+    position: relative;
+    line-height: 1;
+    text-shadow: 0 0 40px rgba(249, 115, 22, 0.3);
+  }
+
+  .glitch.glitch::before,
+  .glitch.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+
+  .glitch.glitch::before {
+    color: var(--color-primary-400);
+    animation: glitch-1 3s infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+  }
+
+  .glitch.glitch::after {
+    color: var(--color-blue-500);
+    animation: glitch-2 3s infinite;
+    clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%);
+  }
+
+  .glitch.glitch:hover::before {
+    animation: glitch-1-fast 0.3s infinite;
+  }
+
+  .glitch.glitch:hover::after {
+    animation: glitch-2-fast 0.3s infinite;
+  }
+
+  /* Partículas flotantes - increased specificity */
+  .particle.particle {
+    position: absolute;
+    background: var(--color-primary-500);
+    border-radius: 4px;
+    opacity: 0.2;
+    animation: float 6s ease-in-out infinite;
+    z-index: 1;
+  }
+
+  .particle.particle-1 {
+    width: 20px;
+    height: 20px;
+    top: 15%;
+    left: 10%;
+    animation-delay: 0s;
+  }
+
+  .particle.particle-2 {
+    width: 15px;
+    height: 15px;
+    top: 60%;
+    right: 15%;
+    animation-delay: 2s;
+  }
+
+  .particle.particle-3 {
+    width: 25px;
+    height: 25px;
+    bottom: 20%;
+    left: 20%;
+    animation-delay: 4s;
+  }
+
+  .particle.particle-4 {
+    width: 18px;
+    height: 18px;
+    top: 25%;
+    right: 25%;
+    animation-delay: 1s;
+  }
+</style>

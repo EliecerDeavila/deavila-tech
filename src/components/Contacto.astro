@@ -1,0 +1,93 @@
+---
+import ServiceForm from "./servicios/ServiceForm.astro";
+---
+
+<section id="contacto" class="relative overflow-hidden"
+  style="background: linear-gradient(180deg, #334155 0%, #101417 100%)">
+  <!-- Imagen izquierda - esquina inferior -->
+  <img 
+    src="/img/decora-izquierdo.png" 
+    alt="" 
+    class="absolute left-[-50px] bottom-[-8%] h-[40%] max-w-[25%] w-auto object-cover object-left-bottom pointer-events-none select-none z-0 opacity-30 animate-slide-right hidden md:block"
+    style="animation-delay: 200ms"
+  />
+
+  <!-- Imagen derecha - esquina superior -->
+  <img 
+    src="/img/decora-derecho.png" 
+    alt="" 
+    class="absolute right-[-50px] top-[-8%] h-[40%] max-w-[25%] w-auto object-cover object-right-top pointer-events-none select-none z-0 opacity-30 animate-slide-left hidden md:block"
+    style="animation-delay: 300ms"
+  />
+
+  <div class="max-w-5xl mx-auto w-full px-4 pt-16 md:pt-20">
+    <h1
+      class="text-2xl sm:text-4xl md:text-6xl lg:text-8xl font-display font-semibold leading-[1.1] text-center"
+    >
+      <span
+        class="block relative w-fit mx-auto animate-slide-up"
+        style="animation-delay: 0ms"
+      >
+        <span id="word-hablemos" class="inline-block">Hablemos</span> de tu
+        <span
+          id="line-contacto-1"
+          class="absolute -bottom-2 md:-bottom-3 h-2.5 md:h-5 bg-primary-400 rounded-sm"
+        ></span>
+      </span>
+      <span class="pt-3 mt-2 animate-slide-up" style="animation-delay: 150ms">
+      </span>
+     próximo &nbsp;
+      <span
+        class="relative w-fit mx-auto animate-slide-up"
+        style="animation-delay: 450ms"
+      >
+      
+        <span id="word-proyecto" class="inline-block text-primary-500"
+          >Proyecto</span
+        >.
+
+        <span
+          id="line-contacto-2"
+          class="absolute -bottom-2 md:-bottom-3 h-2.5 md:h-5 bg-primary-400 rounded-sm"
+        ></span>
+      </span>
+    </h1>
+    <p class="text-neutral-200 mt-6 text-center max-w-3xl mx-auto">
+      Cuéntanos tu proyecto y te prepararemos una propuesta sin compromiso en
+      menos de 48 horas. Tu transformación digital empieza aquí.
+    </p>
+    <p class="text-neutral-400 text-sm text-center mt-4 mb-12 animate-fade-in" style="animation-delay: 1100ms">
+      Respuesta en menos de 24 horas hábiles
+    </p>
+  </div>
+
+  <!-- Formulario de contacto -->
+  <div class="max-w-5xl mx-auto w-full px-4 pb-16 md:pb-20 relative z-10">
+    <ServiceForm />
+  </div>
+</section>
+
+<script>
+  function updateBars() {
+    const w1 = document.getElementById("word-hablemos");
+    const b1 = document.getElementById("line-contacto-1");
+    if (w1 && b1) {
+      const r = w1.getBoundingClientRect();
+      b1.style.left = -r.left + "px";
+      b1.style.width = r.right + "px";
+    }
+    const w2 = document.getElementById("word-proyecto");
+    const b2 = document.getElementById("line-contacto-2");
+    if (w2 && b2) {
+      const r = w2.getBoundingClientRect();
+      const p = w2.parentElement.getBoundingClientRect();
+      b2.style.left = r.left - p.left + "px";
+      b2.style.width = window.innerWidth - r.left + "px";
+    }
+  }
+  document.addEventListener("DOMContentLoaded", () => {
+    updateBars();
+    document.fonts.ready.then(updateBars);
+    window.addEventListener("resize", updateBars);
+  });
+</script>

@@ -1,0 +1,43 @@
+---
+import { Megaphone, Search, DollarSign, Globe, Mail, BarChart3, Crosshair } from "@lucide/astro";
+import ServiceLayout from "../../layouts/ServiceLayout.astro";
+import ServiceHero from "../../components/servicios/ServiceHero.astro";
+import ServiceIncludes from "../../components/servicios/ServiceIncludes.astro";
+import TechStack from "../../components/servicios/TechStack.astro";
+import ServiceMethodology from "../../components/servicios/ServiceMethodology.astro";
+import ServiceCTA from "../../components/servicios/ServiceCTA.astro";
+---
+
+<ServiceLayout title="Marketing Digital - D Avila Tech" description="Implementamos estrategias de marketing digital efectivas para aumentar la visibilidad de tu marca y atraer a tu público objetivo.">
+  <ServiceHero
+    title="Marketing Digital"
+    subtitle="Estrategias basadas en datos que conectan tu marca con las personas correctas en el momento adecuado."
+    icon="/icons/3d/marketing-digital.png"
+  />
+
+  <ServiceIncludes
+    items={[
+      { icon: Search, title: "SEO (Posicionamiento orgánico)", description: "Optimización on-page y off-page para aparecer en los primeros resultados de Google." },
+      { icon: DollarSign, title: "SEM y Google Ads", description: "Campañas pagadas en Google, anuncios de búsqueda, display y shopping optimizadas por conversión." },
+      { icon: Globe, title: "Redes Sociales", description: "Gestión de campañas en Meta Ads (Facebook e Instagram) con segmentación precisa." },
+      { icon: Mail, title: "Email Marketing", description: "Automatización de correos, newsletters, embudos de conversión y segmentación de audiencia." },
+      { icon: BarChart3, title: "Analítica Web", description: "Configuración de Google Analytics 4, dashboards personalizados y reportes de rendimiento." },
+      { icon: Crosshair, title: "Estrategia de contenido", description: "Plan de contenido editorial, copywriting persuasivo y optimización para generación de leads." },
+    ]}
+  />
+
+  <TechStack
+    items={["Google Analytics 4", "Google Ads", "Meta Ads", "SEMrush", "Ahrefs", "Mailchimp", "HubSpot", "Hotjar"]}
+  />
+
+  <ServiceMethodology
+    steps={[
+      { title: "Auditoría", description: "Análisis de situación actual, competencia, keywords y métricas base." },
+      { title: "Estrategia", description: "Definición de objetivos KPIs, buyer persona, canales y presupuesto." },
+      { title: "Ejecución", description: "Creación y lanzamiento de campañas, contenido y optimizaciones técnicas." },
+      { title: "Optimización", description: "Monitoreo continuo, tests A/B y ajustes para maximizar el ROI." },
+    ]}
+  />
+
+  <ServiceCTA title="¿Quieres impulsar tu presencia digital?" preselectedService="Marketing Digital" />
+</ServiceLayout>

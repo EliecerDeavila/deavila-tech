@@ -1,0 +1,43 @@
+---
+import { Smartphone, Crosshair, Bell, CreditCard, Wifi, BarChart3 } from "@lucide/astro";
+import ServiceLayout from "../../layouts/ServiceLayout.astro";
+import ServiceHero from "../../components/servicios/ServiceHero.astro";
+import ServiceIncludes from "../../components/servicios/ServiceIncludes.astro";
+import TechStack from "../../components/servicios/TechStack.astro";
+import ServiceMethodology from "../../components/servicios/ServiceMethodology.astro";
+import ServiceCTA from "../../components/servicios/ServiceCTA.astro";
+---
+
+<ServiceLayout title="Aplicaciones Móviles - D Avila Tech" description="Creamos aplicaciones móviles intuitivas y eficientes para iOS y Android, optimizando la interacción del usuario y el rendimiento.">
+  <ServiceHero
+    title="Aplicaciones Móviles"
+    subtitle="Apps nativas y multiplataforma que conectan tu negocio con tus usuarios donde sea que estén."
+    icon="/icons/3d/aplicaciones-moviles.png"
+  />
+
+  <ServiceIncludes
+    items={[
+      { icon: Smartphone, title: "Apps nativas y multiplataforma", description: "Desarrollamos para iOS y Android con React Native o nativo según tus necesidades de rendimiento." },
+      { icon: Crosshair, title: "UX/UI móvil centrado en usuario", description: "Diseño de interfaces táctiles intuitivas, optimizadas para el comportamiento del usuario móvil." },
+      { icon: Bell, title: "Notificaciones push", description: "Integración de push notifications para mantener a tus usuarios informados y comprometidos." },
+      { icon: CreditCard, title: "Pagos integrados", description: "Pasarelas de pago seguras (Stripe, Mercado Pago, PayPal) dentro de la app." },
+      { icon: Wifi, title: "Modo offline", description: "Sincronización de datos en segundo plano para experiencia fluida incluso sin conexión." },
+      { icon: BarChart3, title: "Analíticas integradas", description: "Monitoreo de uso, rendimiento y métricas clave para mejorar continuamente la app." },
+    ]}
+  />
+
+  <TechStack
+    items={["React Native", "Flutter", "Swift", "Kotlin", "Firebase", "Node.js", "Stripe", "App Store Connect"]}
+  />
+
+  <ServiceMethodology
+    steps={[
+      { title: "Investigación", description: "Análisis de mercado, competencia y necesidades del usuario para definir el alcance de la app." },
+      { title: "Diseño UX/UI", description: "Wireframes, prototipos navegables y diseño visual alineado con plataforma (iOS HIG / Material Design)." },
+      { title: "Desarrollo ágil", description: "Sprints semanales con entregables funcionales, code review y pruebas continuas." },
+      { title: "Publicación", description: "Gestión de publicación en App Store y Google Play, incluyendo assets y metadata ASO." },
+    ]}
+  />
+
+  <ServiceCTA title="¿Tu negocio necesita una app móvil?" preselectedService="Aplicaciones Móviles" />
+</ServiceLayout>

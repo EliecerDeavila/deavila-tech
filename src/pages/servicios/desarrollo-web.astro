@@ -1,0 +1,43 @@
+---
+import { Layout, Palette, Zap, Smartphone, Search, Shield, BarChart3 } from "@lucide/astro";
+import ServiceLayout from "../../layouts/ServiceLayout.astro";
+import ServiceHero from "../../components/servicios/ServiceHero.astro";
+import ServiceIncludes from "../../components/servicios/ServiceIncludes.astro";
+import TechStack from "../../components/servicios/TechStack.astro";
+import ServiceMethodology from "../../components/servicios/ServiceMethodology.astro";
+import ServiceCTA from "../../components/servicios/ServiceCTA.astro";
+---
+
+<ServiceLayout title="Desarrollo Web - D Avila Tech" description="Diseñamos y desarrollamos sitios web atractivos y funcionales que reflejan la identidad de tu marca y mejoran la experiencia del usuario.">
+  <ServiceHero
+    title="Desarrollo Web"
+    subtitle="Creamos sitios web modernos, rápidos y optimizados que cautivan a tus usuarios y potencian tu presencia digital."
+    icon="/icons/3d/desarrollo-web.png"
+  />
+
+  <ServiceIncludes
+    items={[
+      { icon: Palette, title: "Diseño UI/UX personalizado", description: "Interfaces únicas alineadas con tu identidad de marca y orientadas a la conversión." },
+      { icon: Zap, title: "Rendimiento optimizado", description: "Sitios ultrarrápidos con puntuaciones perfectas en Core Web Vitals para mejor SEO." },
+      { icon: Smartphone, title: "Responsive total", description: "Experiencia impecable en cualquier dispositivo: móvil, tablet y escritorio." },
+      { icon: Search, title: "SEO técnico", description: "Estructura semántica, meta tags, datos estructurados y optimización para motores de búsqueda." },
+      { icon: Shield, title: "Seguridad y SSL", description: "Certificados SSL, protección contra vulnerabilidades y buenas prácticas de seguridad." },
+      { icon: BarChart3, title: "Panel administrable", description: "Sistema de gestión de contenido (CMS) para que puedas actualizar tu sitio sin conocimientos técnicos." },
+    ]}
+  />
+
+  <TechStack
+    items={["Astro", "React", "Tailwind CSS", "TypeScript", "Node.js", "WordPress", "Vercel", "Cloudflare"]}
+  />
+
+  <ServiceMethodology
+    steps={[
+      { title: "Briefing", description: "Entrevista inicial para entender tu negocio, objetivos, audiencia y requisitos técnicos." },
+      { title: "Prototipado", description: "Diseñamos wireframes y prototipos interactivos para validar la experiencia visual y funcional." },
+      { title: "Desarrollo", description: "Codificamos con tecnologías modernas, código limpio y metodologías ágiles con entregas parciales." },
+      { title: "QA y Deploy", description: "Pruebas exhaustivas de funcionalidad, rendimiento y seguridad antes del lanzamiento final." },
+    ]}
+  />
+
+  <ServiceCTA title="¿Necesitas un sitio web profesional?" preselectedService="Desarrollo Web" />
+</ServiceLayout>

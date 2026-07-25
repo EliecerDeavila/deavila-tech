@@ -1,0 +1,43 @@
+---
+import { Lightbulb, Building2, Cloud, RefreshCw, ShieldCheck, ClipboardList, TrendingUp } from "@lucide/astro";
+import ServiceLayout from "../../layouts/ServiceLayout.astro";
+import ServiceHero from "../../components/servicios/ServiceHero.astro";
+import ServiceIncludes from "../../components/servicios/ServiceIncludes.astro";
+import TechStack from "../../components/servicios/TechStack.astro";
+import ServiceMethodology from "../../components/servicios/ServiceMethodology.astro";
+import ServiceCTA from "../../components/servicios/ServiceCTA.astro";
+---
+
+<ServiceLayout title="Consultoría Tecnológica - D Avila Tech" description="Ofrecemos asesoramiento experto en tecnología para optimizar procesos, mejorar la infraestructura y maximizar el retorno de inversión.">
+  <ServiceHero
+    title="Consultoría Tecnológica"
+    subtitle="Te guiamos en la toma de decisiones tecnológicas para optimizar procesos, reducir costos y escalar tu negocio."
+    icon="/icons/3d/consultoria-tecnologica.png"
+  />
+
+  <ServiceIncludes
+    items={[
+      { icon: Building2, title: "Arquitectura de software", description: "Diseño de arquitecturas escalables, seguras y mantenibles para tus proyectos tecnológicos." },
+      { icon: Cloud, title: "Migración a la nube", description: "Evaluación y migración a AWS, Google Cloud o Azure con mínima interrupción del servicio." },
+      { icon: RefreshCw, title: "Optimización de procesos", description: "Automatización de flujos de trabajo, integración de sistemas y eliminación de cuellos de botella." },
+      { icon: ShieldCheck, title: "Ciberseguridad", description: "Auditoría de seguridad, implementación de políticas y protección contra amenazas informáticas." },
+      { icon: ClipboardList, title: "Evaluación de proveedores", description: "Análisis y selección de herramientas, plataformas y socios tecnológicos para tu negocio." },
+      { icon: TrendingUp, title: "Transformación digital", description: "Hoja de ruta personalizada para digitalizar tu negocio con tecnologías probadas." },
+    ]}
+  />
+
+  <TechStack
+    items={["AWS", "Google Cloud", "Azure", "Docker", "Kubernetes", "Terraform", "GitHub Actions", "Datadog"]}
+  />
+
+  <ServiceMethodology
+    steps={[
+      { title: "Diagnóstico", description: "Evaluación del estado actual: infraestructura, procesos, equipo y objetivos de negocio." },
+      { title: "Recomendación", description: "Informe detallado con hallazgos, oportunidades de mejora y hoja de ruta priorizada." },
+      { title: "Implementación", description: "Acompañamiento en la ejecución de las mejoras con metodologías ágiles y entregas parciales." },
+      { title: "Seguimiento", description: "Monitoreo de resultados, ajustes post-implementación y transferencia de conocimiento al equipo." },
+    ]}
+  />
+
+  <ServiceCTA title="¿Necesitas asesoría tecnológica?" preselectedService="Consultoría Tecnológica" />
+</ServiceLayout>

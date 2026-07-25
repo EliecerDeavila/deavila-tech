@@ -1,0 +1,23 @@
+---
+import SectionTitle from "./SectionTitle.astro";
+import ServiceForm from "./ServiceForm.astro";
+
+export interface Props {
+  title: string;
+  preselectedService?: string;
+}
+
+const { title, preselectedService = "" } = Astro.props;
+---
+
+<section class="py-16 md:py-24 px-4" style="background: linear-gradient(180deg, #334155 0%, #101417 100%)">
+  <div class="max-w-3xl mx-auto text-center">
+    <SectionTitle title={title} variant="white" />
+    <p class="text-neutral-300 mb-10 animate-fade-in" style="animation-delay: 200ms">
+      Cuéntanos tu proyecto y te prepararemos una propuesta sin compromiso en menos de 48 horas.
+    </p>
+  </div>
+  <div class="max-w-2xl mx-auto">
+    <ServiceForm preselectedService={preselectedService} />
+  </div>
+</section>
