@@ -191,7 +191,7 @@
   }
 
   .bg-gradient-blue {
-    background: linear-gradient(45deg, #0B0F19 0%, #212E4C 50%, #4D6091 100%);
+    background: linear-gradient(45deg, #0B0F1F 0%, #212E4C 50%, #4D6091 100%);
   }
 
   .bg-gradient-gray {
@@ -199,6 +199,14 @@
   }
   .bg-gradient-dark {
     background: linear-gradient(135deg, #020617 0%, #334155 100%);
+  }
+
+  .bg-process-gradient {
+    background: linear-gradient(180deg, #101417 21%, #222B36 70%, #334155 100%);
+  }
+
+  .bg-contact-gradient {
+    background: linear-gradient(180deg, #334155 0%, #101417 100%);
   }
 
   .text-balance {
