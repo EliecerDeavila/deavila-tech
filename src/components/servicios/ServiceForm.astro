@@ -13,26 +13,26 @@ const { preselectedService = "" } = Astro.props;
     <div>
       <label for="name" class="block text-sm font-medium text-neutral-300 mb-1">Nombre completo</label>
       <input type="text" id="name" name="name" required placeholder="Tu nombre"
-        class="w-full rounded-lg border border-border-dark bg-dark-900 px-4 py-3 text-sm text-neutral-100 outline-none transition focus:border-primary-500 focus:ring-2 focus:ring-primary-500/30 placeholder:text-neutral-500" />
+        class="w-full rounded-lg border border-border-dark bg-dark-900 px-4 py-3 text-sm text-neutral-100 outline-none transition focus:border-primary-500 focus:ring-2 focus:ring-primary-500/30 focus-visible:outline-2 focus-visible:outline-primary-500 focus-visible:outline-offset-2 placeholder:text-neutral-500" />
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       <div>
         <label for="from_email" class="block text-sm font-medium text-neutral-300 mb-1">Correo electrónico</label>
         <input type="email" id="from_email" name="from_email" required placeholder="correo@ejemplo.com"
-          class="w-full rounded-lg border border-border-dark bg-dark-900 px-4 py-3 text-sm text-neutral-100 outline-none transition focus:border-primary-500 focus:ring-2 focus:ring-primary-500/30 placeholder:text-neutral-500" />
+          class="w-full rounded-lg border border-border-dark bg-dark-900 px-4 py-3 text-sm text-neutral-100 outline-none transition focus:border-primary-500 focus:ring-2 focus:ring-primary-500/30 focus-visible:outline-2 focus-visible:outline-primary-500 focus-visible:outline-offset-2 placeholder:text-neutral-500" />
       </div>
       <div>
         <label for="phone" class="block text-sm font-medium text-neutral-300 mb-1">Teléfono</label>
         <input type="tel" id="phone" name="phone" placeholder="+57 300 000 0000"
-          class="w-full rounded-lg border border-border-dark bg-dark-900 px-4 py-3 text-sm text-neutral-100 outline-none transition focus:border-primary-500 focus:ring-2 focus:ring-primary-500/30 placeholder:text-neutral-500" />
+          class="w-full rounded-lg border border-border-dark bg-dark-900 px-4 py-3 text-sm text-neutral-100 outline-none transition focus:border-primary-500 focus:ring-2 focus:ring-primary-500/30 focus-visible:outline-2 focus-visible:outline-primary-500 focus-visible:outline-offset-2 placeholder:text-neutral-500" />
       </div>
     </div>
 
     <div>
       <label for="service" class="block text-sm font-medium text-neutral-300 mb-1">Servicio de interés</label>
       <select id="service" name="service"
-        class="w-full rounded-lg border border-border-dark bg-dark-900 px-4 py-3 pr-10 text-sm text-neutral-100 outline-none transition appearance-none bg-[url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23BABABB%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E')] bg-no-repeat bg-[center_right_0.75rem] focus:border-primary-500 focus:ring-2 focus:ring-primary-500/30">
+        class="w-full rounded-lg border border-border-dark bg-dark-900 px-4 py-3 pr-10 text-sm text-neutral-100 outline-none transition appearance-none bg-[url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23BABABB%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E')] bg-no-repeat bg-[center_right_0.75rem] focus:border-primary-500 focus:ring-2 focus:ring-primary-500/30 focus-visible:outline-2 focus-visible:outline-primary-500 focus-visible:outline-offset-2">
         <option value="">Selecciona un servicio</option>
         <option value="Desarrollo Web">Desarrollo Web</option>
         <option value="Aplicaciones Móviles">Aplicaciones Móviles</option>
@@ -46,7 +46,7 @@ const { preselectedService = "" } = Astro.props;
     <div>
       <label for="message" class="block text-sm font-medium text-neutral-300 mb-1">Mensaje</label>
       <textarea id="message" name="message" rows="5" required placeholder="Cuéntanos sobre tu proyecto..."
-        class="w-full rounded-lg border border-border-dark bg-dark-900 px-4 py-3 text-sm text-neutral-100 outline-none transition focus:border-primary-500 focus:ring-2 focus:ring-primary-500/30 placeholder:text-neutral-500 resize-none"></textarea>
+        class="w-full rounded-lg border border-border-dark bg-dark-900 px-4 py-3 text-sm text-neutral-100 outline-none transition focus:border-primary-500 focus:ring-2 focus:ring-primary-500/30 focus-visible:outline-2 focus-visible:outline-primary-500 focus-visible:outline-offset-2 placeholder:text-neutral-500 resize-none"></textarea>
     </div>
 
     <button type="submit" class="btn-shine-white w-full">Enviar mensaje</button>

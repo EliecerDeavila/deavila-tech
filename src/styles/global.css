@@ -123,6 +123,27 @@
   img {
     max-width: 100%;
   }
+
+  :focus-visible {
+    outline: 2px solid var(--color-primary-500);
+    outline-offset: 2px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  [data-scroll] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
 
 @layer utilities {
@@ -235,6 +256,11 @@
     box-shadow: 0 0 24px rgba(249, 202, 168, 0.5);
   }
 
+  .btn-shine:focus-visible {
+    outline: 2px solid var(--color-primary-500);
+    outline-offset: 2px;
+  }
+
   .btn-shine-white {
     display: inline-flex;
     align-items: center;
@@ -255,6 +281,11 @@
     box-shadow: 0 0 24px rgba(249, 202, 168, 0.5);
   }
 
+  .btn-shine-white:focus-visible {
+    outline: 2px solid var(--color-primary-500);
+    outline-offset: 2px;
+  }
+
   .btn-primary {
     @apply inline-flex items-center justify-center rounded-[8px] bg-primary-500 px-5 py-3 text-sm font-semibold text-white transition;
   }
@@ -267,12 +298,20 @@
     @apply bg-primary-700;
   }
 
+  .btn-primary:focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary-500;
+  }
+
   .btn-secondary {
     @apply inline-flex items-center justify-center bg-neutral-800 rounded-[8px] border border-neutral-400  px-5 py-3 text-sm font-semibold text-neutral-200 transition;
   }
 
   .btn-secondary:hover {
     @apply bg-dark-900 border-neutral-800 text-neutral-100 transition;
+  }
+
+  .btn-secondary:focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary-500;
   }
 
   .card-dark {
