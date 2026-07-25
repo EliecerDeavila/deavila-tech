@@ -7,8 +7,13 @@ const { preselectedService = "" } = Astro.props;
 ---
 
 <div class="max-w-2xl mx-auto w-full">
-  <form id="contact-form" class="space-y-5">
+  <form id="contact-form" class="space-y-5" method="POST">
     <input type="hidden" name="service-hidden" value={preselectedService} />
+    <!-- Honeypot - bots fill this, humans don't see it -->
+    <div style="position: absolute; left: -9999px; opacity: 0;" aria-hidden="true">
+      <label for="website">No llenes esto</label>
+      <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+    </div>
 
     <div>
       <label for="name" class="block text-sm font-medium text-neutral-300 mb-1">Nombre completo</label>
@@ -68,6 +73,15 @@ const { preselectedService = "" } = Astro.props;
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       const status = document.getElementById("form-status");
+
+      // Honeypot check - if filled, silently reject
+      const honeypot = this.website;
+      if (honeypot && honeypot.value) {
+        status.textContent = "Mensaje enviado con éxito.";
+        status.className = "text-sm text-center mt-2 block text-green-400";
+        this.reset();
+        return;
+      }
       status.classList.remove("hidden", "text-green-400", "text-red-400");
       status.textContent = "Enviando...";
       status.className = "text-sm text-center mt-2 block text-neutral-400";

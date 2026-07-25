@@ -16,5 +16,3 @@ export function initScrollAnimations() {
     observer.observe(el);
   });
 }
-
-document.addEventListener('DOMContentLoaded', initScrollAnimations);

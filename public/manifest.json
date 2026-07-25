@@ -1,0 +1,21 @@
+{
+  "name": "D Avila Tech",
+  "short_name": "D Avila Tech",
+  "description": "Desarrolladores de software y aplicaciones web",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#020617",
+  "theme_color": "#F97316",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    }
+  ]
+}

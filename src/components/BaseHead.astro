@@ -5,13 +5,16 @@ interface Props {
     description: string;
     image?: string;
 }
-const {title, description, image='/image/Imagen-fondo.svg'} = Astro.props
+const {title, description, image='/img/og-image.png'} = Astro.props
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 ---
 <meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		<link rel="manifest" href="/manifest.json" />
+		<meta name="theme-color" content="#020617" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
         <link rel="canonical" href={canonicalURL}>
@@ -20,15 +23,35 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
         <!--- Open Graph / Facebook -->
         <meta property="og:type" content="website"/>
-        <meta property="og:url" content={Astro.url}/>
+        <meta property="og:url" content={canonicalURL}/>
         <meta property="og:title" content={title}/>
         <meta property="og:description" content={description}/>
-        <meta property="og:image" content={new URL(image, Astro.url)}/>
+        <meta property="og:image" content={new URL(image, Astro.site)}/>
+        <meta property="og:site_name" content="D Avila Tech"/>
+        <meta property="og:locale" content="es_ES"/>
 
         <!--- Twitter -->
         <meta property="twitter:card" content="summary_large_image"/>
-        <meta property="twitter:url" content={Astro.url}/>
+        <meta property="twitter:url" content={canonicalURL}/>
         <meta property="twitter:title" content={title}/>
         <meta property="twitter:description" content={description}/>
-        <meta property="twitter:image" content={new URL (image, Astro.url)} />
-        
+        <meta property="twitter:image" content={new URL(image, Astro.site)}/>
+
+        <!--- Font Preload -->
+        <link rel="preload" as="font" type="font/woff2" href="/fonts/clash-display/ClashDisplay-Variable.woff2" crossorigin />
+
+        <!--- JSON-LD Structured Data -->
+        <script type="application/ld+json" set:html={JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "D Avila Tech",
+            "url": canonicalURL.href,
+            "logo": new URL("/logo.svg", Astro.site).href,
+            "description": "Desarrolladores de software y aplicaciones web",
+            "sameAs": [],
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "contactType": "sales",
+                "email": "soporteti154@gmail.com"
+            }
+        })} />

@@ -10,6 +10,8 @@ import { Zap, TrendingUp, Eye } from "@lucide/astro"
   <img 
     src="/img/imagen.png" 
     alt="" 
+    loading="lazy"
+    decoding="async"
     class="absolute left-[-50px] bottom-[-8%] h-[95%] max-w-[80%] w-auto object-cover object-left-bottom pointer-events-none select-none z-0 opacity-40 animate-slide-right hidden md:block"
     style="animation-delay: 200ms"
   />
@@ -18,12 +20,12 @@ import { Zap, TrendingUp, Eye } from "@lucide/astro"
   <!-- Contenido -->
   <div class="relative z-10 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
     <div class="md:col-start-2">
-      <h4 
-        class="text-primary-300 font-bold text-lg mb-2"
+      <span 
+        class="text-primary-300 font-bold text-lg mb-2 block"
         data-scroll="fade" data-scroll-delay="0"
       >
         Beneficios
-      </h4>
+      </span>
       <h2 
         class="text-3xl md:text-4xl font-display font-bold text-white mb-6"
         data-scroll="fade" data-scroll-delay="100"
