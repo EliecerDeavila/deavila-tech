@@ -10,14 +10,21 @@ export interface Props {
 const { title, preselectedService = "" } = Astro.props;
 ---
 
-<section class="py-16 md:py-24 px-4" style="background: linear-gradient(180deg, #334155 0%, #101417 100%)">
-  <div class="max-w-3xl mx-auto text-center">
+<section class="py-16 md:py-24 px-4 relative overflow-hidden" style="background: linear-gradient(180deg, #334155 0%, #101417 100%)">
+  <!-- Imagen 3D blend - esquina inferior derecha -->
+  <img 
+    src="/img/figura_formularioServ.png" 
+    alt="" 
+    class="absolute right-[-30px] bottom-[-5%] h-[60%] max-w-[25%] w-auto object-contain object-bottom pointer-events-none select-none z-0 opacity-40 hidden lg:block"
+  />
+  
+  <div class="max-w-3xl mx-auto text-center relative z-10">
     <SectionTitle title={title} variant="white" />
     <p class="text-neutral-300 mb-10 animate-fade-in" style="animation-delay: 200ms">
       Cuéntanos tu proyecto y te prepararemos una propuesta sin compromiso en menos de 48 horas.
     </p>
   </div>
-  <div class="max-w-2xl mx-auto">
+  <div class="max-w-2xl mx-auto relative z-10">
     <ServiceForm preselectedService={preselectedService} />
   </div>
 </section>
