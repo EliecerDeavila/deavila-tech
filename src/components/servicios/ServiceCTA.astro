@@ -25,13 +25,13 @@ const { title, preselectedService = "" } = Astro.props;
     class="absolute right-[-20px] top-[10%] h-[500px] md:h-[650px] max-w-[30%] w-auto object-contain object-top pointer-events-none select-none z-0 opacity-40 hidden lg:block"
   />
   
-  <div class="max-w-3xl mx-auto text-center relative z-10">
+  <div class="max-w-4xl mx-auto text-center relative z-10">
     <SectionTitle title={title} variant="white" animate={true} />
     <p class="text-neutral-300 mb-10" data-scroll="fade" data-scroll-delay="100">
       Cuéntanos tu proyecto y te prepararemos una propuesta sin compromiso en menos de 48 horas.
     </p>
   </div>
-  <div class="max-w-2xl mx-auto relative z-10">
+  <div class="max-w-4xl mx-auto relative z-10">
     <ServiceForm preselectedService={preselectedService} />
   </div>
 </section>
