@@ -19,26 +19,26 @@ import { Zap, TrendingUp, Eye } from "@lucide/astro"
   <div class="relative z-10 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
     <div class="md:col-start-2">
       <h4 
-        class="text-primary-300 font-bold text-lg mb-2 animate-slide-down"
-        style="animation-delay: 0ms"
+        class="text-primary-300 font-bold text-lg mb-2"
+        data-scroll="fade" data-scroll-delay="0"
       >
         Beneficios
       </h4>
       <h2 
-        class="text-3xl md:text-4xl font-display font-bold text-white mb-6 animate-slide-down"
-        style="animation-delay: 150ms"
+        class="text-3xl md:text-4xl font-display font-bold text-white mb-6"
+        data-scroll="fade" data-scroll-delay="100"
       >
         ¿Por qué trabajar con nosotros?
       </h2>
       <p 
-        class="text-neutral-300 mb-8 animate-slide-down"
-        style="animation-delay: 300ms"
+        class="text-neutral-300 mb-8"
+        data-scroll="fade" data-scroll-delay="200"
       >
         Impulsamos tu negocio con soluciones digitales que marcan la diferencia.
       </p>
 
       <div class="space-y-6">
-        <div class="flex gap-4 animate-slide-up" style="animation-delay: 400ms">
+        <div class="flex gap-4" data-scroll data-scroll-delay="300">
           <Zap class="w-6 h-6 text-primary-500 mt-1 shrink-0" />
           <div>
             <h5 class="text-white font-semibold text-lg">Optimización</h5>
@@ -46,7 +46,7 @@ import { Zap, TrendingUp, Eye } from "@lucide/astro"
           </div>
         </div>
 
-        <div class="flex gap-4 animate-slide-up" style="animation-delay: 550ms">
+        <div class="flex gap-4" data-scroll data-scroll-delay="400">
           <TrendingUp class="w-6 h-6 text-primary-500 mt-1 shrink-0" />
           <div>
             <h5 class="text-white font-semibold text-lg">Escalabilidad</h5>
@@ -54,7 +54,7 @@ import { Zap, TrendingUp, Eye } from "@lucide/astro"
           </div>
         </div>
 
-        <div class="flex gap-4 animate-slide-up" style="animation-delay: 700ms">
+        <div class="flex gap-4" data-scroll data-scroll-delay="500">
           <Eye class="w-6 h-6 text-primary-500 mt-1 shrink-0" />
           <div>
             <h5 class="text-white font-semibold text-lg">Visibilidad</h5>

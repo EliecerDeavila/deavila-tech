@@ -25,8 +25,8 @@ import ServiceForm from "./servicios/ServiceForm.astro";
       class="text-2xl sm:text-4xl md:text-6xl lg:text-8xl font-display font-semibold leading-[1.1] text-center"
     >
       <span
-        class="block relative w-fit mx-auto animate-slide-up"
-        style="animation-delay: 0ms"
+        class="block relative w-fit mx-auto"
+        data-scroll data-scroll-delay="0"
       >
         <span id="word-hablemos" class="inline-block">Hablemos</span> de tu
         <span
@@ -34,12 +34,12 @@ import ServiceForm from "./servicios/ServiceForm.astro";
           class="absolute -bottom-2 md:-bottom-3 h-2.5 md:h-5 bg-primary-400 rounded-sm"
         ></span>
       </span>
-      <span class="pt-3 mt-2 animate-slide-up" style="animation-delay: 150ms">
+      <span class="pt-3 mt-2" data-scroll data-scroll-delay="100">
       </span>
      próximo &nbsp;
       <span
-        class="relative w-fit mx-auto animate-slide-up"
-        style="animation-delay: 450ms"
+        class="relative w-fit mx-auto"
+        data-scroll data-scroll-delay="200"
       >
       
         <span id="word-proyecto" class="inline-block text-primary-500"
@@ -52,11 +52,11 @@ import ServiceForm from "./servicios/ServiceForm.astro";
         ></span>
       </span>
     </h1>
-    <p class="text-neutral-200 mt-6 text-center max-w-3xl mx-auto">
+    <p class="text-neutral-200 mt-6 text-center max-w-3xl mx-auto" data-scroll="fade" data-scroll-delay="300">
       Cuéntanos tu proyecto y te prepararemos una propuesta sin compromiso en
       menos de 48 horas. Tu transformación digital empieza aquí.
     </p>
-    <p class="text-neutral-400 text-sm text-center mt-4 mb-12 animate-fade-in" style="animation-delay: 1100ms">
+    <p class="text-neutral-400 text-sm text-center mt-4 mb-12" data-scroll="fade" data-scroll-delay="400">
       Respuesta en menos de 24 horas hábiles
     </p>
   </div>

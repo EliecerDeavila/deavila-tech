@@ -14,7 +14,7 @@ const { steps } = Astro.props;
     <p class="text-neutral-400 text-center mb-12 max-w-2xl mx-auto">Nuestro proceso paso a paso para entregar resultados excepcionales.</p>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       {steps.map((step, i) => (
-        <div class="card-soft p-6 relative overflow-hidden group animate-slide-up" style={`animation-delay: ${i * 100}ms`}>
+        <div class="card-soft p-6 relative overflow-hidden group" data-scroll data-scroll-delay={i * 100}>
           <div class="absolute inset-0 opacity-20 pointer-events-none bg-gradient-gray"></div>
           <div class="relative z-10">
             <span class="block text-5xl md:text-6xl font-display font-bold text-right text-white/20 group-hover:text-primary-500 transition-colors duration-300">

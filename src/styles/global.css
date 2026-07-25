@@ -315,3 +315,56 @@
     @apply mx-auto max-w-4xl w-full;
   }
 }
+
+/* =========================
+   SCROLL ANIMATIONS
+========================= */
+
+[data-scroll] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+[data-scroll].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[data-scroll="fade"] {
+  transform: none;
+}
+
+[data-scroll="fade"].is-visible {
+  opacity: 1;
+}
+
+[data-scroll="left"] {
+  transform: translateX(-60px);
+}
+
+[data-scroll="right"] {
+  transform: translateX(60px);
+}
+
+[data-scroll="scale"] {
+  transform: scale(0.95);
+}
+
+[data-scroll="scale"].is-visible {
+  transform: scale(1);
+}
+
+/* Stagger delays */
+[data-scroll-delay="50"] { transition-delay: 50ms; }
+[data-scroll-delay="100"] { transition-delay: 100ms; }
+[data-scroll-delay="150"] { transition-delay: 150ms; }
+[data-scroll-delay="200"] { transition-delay: 200ms; }
+[data-scroll-delay="250"] { transition-delay: 250ms; }
+[data-scroll-delay="300"] { transition-delay: 300ms; }
+[data-scroll-delay="350"] { transition-delay: 350ms; }
+[data-scroll-delay="400"] { transition-delay: 400ms; }
+[data-scroll-delay="450"] { transition-delay: 450ms; }
+[data-scroll-delay="500"] { transition-delay: 500ms; }
+[data-scroll-delay="550"] { transition-delay: 550ms; }
+[data-scroll-delay="600"] { transition-delay: 600ms; }

@@ -23,5 +23,9 @@ const { title, description, image = "/image/Imagen-fondo.svg" } = Astro.props;
     </main>
     <Footer />
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+      import { initScrollAnimations } from '../scripts/scroll-animations.js';
+      document.addEventListener('DOMContentLoaded', initScrollAnimations);
+    </script>
   </body>
 </html>
